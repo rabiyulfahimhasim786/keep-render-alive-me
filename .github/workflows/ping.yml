@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl the URL
-        run: curl -s https://stock-tg-fastapi-render.onrender.com/ > /dev/null
+        run: curl -I https://stock-tg-fastapi-render.onrender.com/
