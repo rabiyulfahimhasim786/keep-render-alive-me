@@ -4,14 +4,14 @@ on:
   schedule:
     # Run at 08:58, 09:28, 13:58, and 18:58 UTC
     # NOTE: GitHub Actions uses UTC time, so adjust from your local time (IST = UTC+5:30)
-    - cron: "27 3 * * *"  # 08:58 IST = 03:28 UTC
-    - cron: "57 3 * * *"  # 09:28 IST = 03:58 UTC
-    - cron: "27 8 * * *"  # 13:58 IST = 08:28 UTC
-    - cron: "57 13 * * *" # 19:28 IST = 13:58 UTC
+    - cron: "28 3 * * *"  # 08:58 IST = 03:28 UTC
+    - cron: "58 3 * * *"  # 09:28 IST = 03:58 UTC
+    - cron: "28 8 * * *"  # 13:58 IST = 08:28 UTC
+    - cron: "58 13 * * *" # 19:28 IST = 13:58 UTC
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
       - name: Curl the URL
-        run: curl -I https://stock-tg-fastapi-render.onrender.com/
+        run: curl -I https://stock-tg-fastapi-render.onrender.com/send-individual-stocks-alert/
